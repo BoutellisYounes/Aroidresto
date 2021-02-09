@@ -2,14 +2,25 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="fr.isen.boutellis.androiderestaurant">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AndroidERestaurant">
+        android:theme="@style/Theme.AndroidERestaurant"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".BasketActivity"></activity>
+        <activity android:name=".DetailActivity"></activity>
+
+
+        <activity android:name=".CategoryActivity" />
         <activity android:name=".HomeActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
